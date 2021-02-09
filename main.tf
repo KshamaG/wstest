@@ -35,7 +35,7 @@ EOF
 resource "ibm_app_route" "approute-demo-001" {
   domain_guid = data.ibm_app_domain_shared.domain.id
   space_guid  = data.ibm_space.spacedata.id
-  host        = "cf-demo-${var.environment}-001"
+  host        = "${var.app_name}-${var.environment}"
 }
 
 resource "ibm_app" "cf-demo-001" {
