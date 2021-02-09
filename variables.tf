@@ -25,3 +25,6 @@ variable "dir_to_clone" {
 variable "app_zip" {
   default = "/tmp/app.zip"
 }
+variable "app_name" {
+  default = "cf-demo-001-789"
+}

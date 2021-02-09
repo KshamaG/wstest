@@ -42,9 +42,9 @@ resource "ibm_app" "cf-demo-001" {
     depends_on = [
     null_resource.prepare_app_zip,
   ]
-  name                 = "cf-demo-${var.environment}-001"
+  name                 = var.app_name
   space_guid           = data.ibm_space.spacedata.id
-  app_path             = var.app_zip   #"app.zip"
+  app_path             = var.app_zip
   buildpack            = "python_buildpack"
   route_guid           = [ibm_app_route.approute-demo-001.id]
   app_version          = "1"
