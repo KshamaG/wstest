@@ -14,7 +14,7 @@ variable "app_version" {
   default = "1"
 }
 variable "git_repo" {
-  default = "https://github.ibm.com/kgurudut/wstest.git"
+    default = "https://github.com/KshamaG/wstest.git"
 }
 variable "source_dir" {
     default = "wstest/src"
